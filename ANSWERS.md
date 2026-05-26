@@ -36,13 +36,13 @@ npm install -g firebase-tools
 #### 2.1-Build the production assets:
 This creates a optimized, production-ready dist/ folder.
 
-Bash
+
 ```
    npm run build
 ```
 #### 2.2-Initialize Firebase (First time only):
 
-Bash
+
 ```
    npx firebase init
 ```
@@ -60,7 +60,7 @@ Overwrite dist/index.html: Choose No to prevent overwriting your built files.
 
 #### 2.3-Deploy live to the web:
 
-Bash
+
 ```
    npx firebase deploy
 ```
@@ -82,6 +82,8 @@ Visual decision 2: today's column gets a soft blue background, while completed c
 
 For streaks, "current" counts through today if today is checked. If today is not checked, it counts the streak up to yesterday. I picked this because missing today's check early in the day should not immediately make a good streak look broken.
 
+---
+
 ## 3. Responsive & accessibility
 
 On a 360px phone, the layout stacks: nav stays simple, the hero becomes one column, the add form becomes vertical, and the grid scrolls horizontally so the day columns stay readable.
@@ -92,6 +94,8 @@ Accessibility handled: inputs and buttons have labels or clear accessible names,
 
 Accessibility skipped: I did not add a full screen-reader-only table summary for the grid. With another pass, I would add a short hidden description explaining the Monday-start week and disabled future dates.
 
+---
+
 ## 4. AI usage
 
 I used gemini to handle some problems of letting website responsive and add some some hover effect
@@ -99,6 +103,8 @@ I used gemini to handle some problems of letting website responsive and add some
 i use the nanobanana to generate the image of the hero
 
 i use ai to write some of readme file and answer.md actually ( by the way now i write the answers manually hahaha )
+
+---
 
 ## 5. Honest gap
 
