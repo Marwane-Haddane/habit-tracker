@@ -5,9 +5,17 @@
 ANSWERS.md
 ```
 
-##for the project description and questions that i answer are here
+## for the project description and questions that i answer are here
 ```bash
 Assessment V2-b.pdf
+```
+## Deployment
+
+This project is hosted on **Firebase Hosting**. Follow these steps to build and deploy your own updates:
+ Live Demo
+You can view the live application here:
+```
+👉 https://habit-tracker4marwane.web.app
 ```
 --- 
 
