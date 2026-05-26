@@ -1,0 +1,307 @@
+.tracker-section {
+  width: min(1120px, calc(100% - 32px));
+  margin: 24px auto 0;
+  padding: 28px;
+  border: 1px solid rgba(23, 49, 59, 0.08);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 20px 50px rgba(23, 49, 59, 0.08);
+}
+
+.tracker-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.tracker-header h2 {
+  margin: 0;
+  color: #112d32;
+  font-size: 2rem;
+}
+
+.tracker-summary {
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #e4f1ef;
+  color: #14746f;
+  font-weight: 800;
+}
+
+.add-habit {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.add-habit label {
+  color: #415a60;
+  font-weight: 800;
+}
+
+.add-row {
+  display: flex;
+  gap: 10px;
+}
+
+.add-row input,
+.habit-name input {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid #c9dbd8;
+  border-radius: 8px;
+  padding: 0 14px;
+  color: #17313b;
+  background: #ffffff;
+}
+
+.add-row input::placeholder {
+  color: #82969a;
+}
+
+.add-row button,
+.week-nav button,
+.row-actions button {
+  min-height: 42px;
+  border: 0;
+  border-radius: 8px;
+  padding: 0 14px;
+  background: #14746f;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.add-row button:hover,
+.week-nav button:hover,
+.row-actions button:hover {
+  background: #0f5f5a;
+}
+
+.week-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 16px 0 22px;
+  flex-wrap: wrap;
+}
+
+.week-range {
+  min-height: 48px;
+  display: grid;
+  place-items: center;
+  padding: 0 16px;
+  border: 1px solid #d7e6e3;
+  border-radius: 8px;
+  background: #f7fbfa;
+  color: #17313b;
+}
+
+.week-range span {
+  color: #668086;
+  font-size: 0.84rem;
+}
+
+.week-nav .quiet-button,
+.row-actions .danger-button {
+  background: #e4f1ef;
+  color: #14746f;
+}
+
+.week-nav .quiet-button:hover {
+  background: #d5e9e6;
+}
+
+.empty-state {
+  display: grid;
+  place-items: center;
+  min-height: 220px;
+  border: 1px dashed #adc9c5;
+  border-radius: 8px;
+  background: #f7fbfa;
+  text-align: center;
+  padding: 28px;
+}
+
+.empty-state h3 {
+  margin: 0 0 8px;
+  color: #112d32;
+}
+
+.empty-state p {
+  max-width: 360px;
+  margin: 0;
+  color: #587276;
+  line-height: 1.6;
+}
+
+.grid-wrap {
+  overflow-x: auto;
+  border: 1px solid #d7e6e3;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.habit-grid {
+  width: 100%;
+  min-width: 860px;
+  border-collapse: collapse;
+}
+
+.habit-grid th,
+.habit-grid td {
+  border-bottom: 1px solid #e3eeec;
+  padding: 12px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.habit-grid thead th {
+  background: #f0f7f5;
+  color: #4a646a;
+  font-size: 0.88rem;
+}
+
+.habit-grid thead th span,
+.habit-grid thead th small {
+  display: block;
+}
+
+.habit-grid tbody tr:last-child th,
+.habit-grid tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.habit-column,
+.habit-name {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  width: 210px;
+  text-align: left;
+  background: #ffffff;
+}
+
+.habit-column {
+  z-index: 3;
+  background: #f0f7f5;
+}
+
+.habit-name span {
+  display: block;
+  max-width: 190px;
+  overflow-wrap: anywhere;
+}
+
+.today-column,
+.today-cell {
+  background: #eaf8fb;
+}
+
+.check-cell {
+  width: 34px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid #b9cfcb;
+  border-radius: 8px;
+  background: #f7fbfa;
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.check-cell:hover:not(:disabled) {
+  border-color: #1b9aaa;
+}
+
+.check-cell.is-checked {
+  border-color: #14746f;
+  background: #14746f;
+  box-shadow: 0 8px 18px rgba(20, 116, 111, 0.22);
+}
+
+.check-cell:disabled {
+  opacity: 0.38;
+}
+
+.streak-column {
+  width: 96px;
+}
+
+.streak-count strong {
+  display: block;
+  color: #14746f;
+  font-size: 1.35rem;
+}
+
+.streak-count span {
+  color: #668086;
+  font-size: 0.82rem;
+}
+
+.actions-column {
+  width: 160px;
+}
+
+.row-actions {
+  min-width: 160px;
+}
+
+.row-actions button {
+  min-height: 34px;
+  padding: 0 10px;
+  font-size: 0.86rem;
+}
+
+.row-actions button + button {
+  margin-left: 6px;
+}
+
+.row-actions .danger-button {
+  color: #8a2f34;
+  background: #f7e6e7;
+}
+
+.row-actions .danger-button:hover {
+  background: #efd2d5;
+}
+
+@media (max-width: 760px) {
+  .tracker-section {
+    width: min(100% - 24px, 1120px);
+    padding: 18px;
+  }
+
+  .tracker-header {
+    display: grid;
+  }
+
+  .tracker-header h2 {
+    font-size: 1.65rem;
+  }
+
+  .add-row {
+    display: grid;
+  }
+
+  .week-range {
+    order: -1;
+    width: 100%;
+    align-items: center;
+  }
+
+  .week-nav button {
+    flex: 1 1 120px;
+  }
+
+  .habit-grid {
+    min-width: 760px;
+  }
+
+  .habit-column,
+  .habit-name {
+    width: 160px;
+  }
+}
