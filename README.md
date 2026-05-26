@@ -1,16 +1,34 @@
-# React + Vite
+# Habit Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A single-page React habit tracker with weekly checkmarks, current streaks, week navigation, and localStorage persistence.
 
-Currently, two official plugins are available:
+## Run locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+Open the local URL Vite prints in the terminal, usually `http://localhost:5173`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Build
 
-## Expanding the ESLint configuration
+```bash
+npm run build
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Hero image
+
+The hero section looks for this file:
+
+```text
+public/hero-habit.png
+```
+
+Suggested Nano Banana prompt:
+
+```text
+A calm minimal desk scene for a habit tracker web app, a weekly checklist notebook with small green and blue checkmarks, a glass of water, a pen, and a small plant, soft natural morning light, clean modern composition, no text, no logos, friendly productivity mood, high quality digital illustration, 4:3 aspect ratio
+```
+
+After generating it, place the image at `public/hero-habit.png`.
