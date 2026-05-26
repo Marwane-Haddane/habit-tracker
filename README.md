@@ -1,6 +1,17 @@
 # Habit Tracker
 
-A single-page React habit tracker with weekly checkmarks, current streaks, week navigation, and localStorage persistence.
+## for technical explanation read
+```bash
+ANSWERS.md
+```
+
+##for the project description and questions that i answer are here
+```bash
+Assessment V2-b.pdf
+```
+--- 
+
+**Habit Tracker** is a single-page React habit tracker with weekly checkmarks, current streaks, week navigation, and localStorage persistence.
 
 ## Run locally
 
