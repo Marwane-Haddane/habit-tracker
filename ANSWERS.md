@@ -17,7 +17,58 @@ To make a production build:
 npm run build
 ```
 
-No deployed URL yet.
+## Deployment
+
+This project is hosted on **Firebase Hosting**. Follow these steps to build and deploy your own updates:
+ Live Demo
+You can view the live application here:
+```
+👉 https://habit-tracker4marwane.web.app
+```
+
+### Prerequisites
+#### 1-Make sure you have the Firebase CLI tools installed globally:
+```bash
+npm install -g firebase-tools
+```
+#### 2-Deployment Steps
+
+#### 2.1-Build the production assets:
+This creates a optimized, production-ready dist/ folder.
+
+Bash
+```
+   npm run build
+```
+#### 2.2-Initialize Firebase (First time only):
+
+Bash
+```
+   npx firebase init
+```
+When prompted, use these configuration settings:
+
+Feature: Choose Hosting: Set up deployments for static web apps.
+
+Project Setup: Select Use an existing project and pick your habit tracker project (or create a new project)
+
+Public directory: Type dist (matching your Vite build output after building the project in steps before).
+
+Single-page app configuration: Choose Yes (rewrites all URLs to /index.html).
+
+Overwrite dist/index.html: Choose No to prevent overwriting your built files.
+
+#### 2.3-Deploy live to the web:
+
+Bash
+```
+   npx firebase deploy
+```
+
+
+---
+
+
 
 ## 2. Stack & design choices
 
@@ -43,14 +94,12 @@ Accessibility skipped: I did not add a full screen-reader-only table summary for
 
 ## 4. AI usage
 
-I used OpenAI Codex in this editor to refactor the existing React/Vite project. I asked it to create a medium-level student habit tracker with a navbar, footer, hero area, localStorage persistence, weekly grid, streaks, and responsive styling.
+I used gemini to handle some problems of letting website responsive and add some some hover effect
 
-Codex gave me the React component structure, CSS, README, and this ANSWERS.md draft. I changed the output to keep it simpler and more student-like: no extra libraries, no icons package, and no complex date library. I also kept the grid as a plain HTML table because it is easier to understand and more accessible than a custom div grid.
+i use the nanobanana to generate the image of the hero
 
-For the hero image, I asked Codex for a Nano Banana prompt. The image itself is not generated in the repo yet. The app expects `public/hero-habit.png`, and I left a styled fallback so the page still looks complete before the final image is added.
-
-One specific AI-output change: the first persistence approach loaded localStorage inside an effect and ESLint complained about synchronous setState in the effect. I changed it to lazy initial state, so the saved data is read before the first render and the lint rule passes.
+i use ai to write some of readme file and answer.md actually ( by the way now i write the answers manually hahaha )
 
 ## 5. Honest gap
 
-The least polished part is the inline rename flow. It works, but it is basic: it saves every typed change immediately and has no cancel button. With another day, I would add Save and Cancel buttons, prevent empty habit names, and show a small confirmation before deleting a habit.
+In this version i don't add a login to give each user the possibility to use this app it's actually complex alittle bit and need backend for high level project to store username and password in database using sqlite or mangodb atlas ... , and for the backend i will use the flask to capture the ip of the user in case i don't add login i can see the ip of the user who write a habit their, for the feature that i thought is to add an ai that give advices based on the habits, give some statistics on how those habits gonna effect ur longterm life, so that is what i think about right now   
